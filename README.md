@@ -1,30 +1,47 @@
 //bibliotecas
+
 #include <stdio.h>
+
 #include <stdlib.h>
+
 #include <locale.h>
 
 // constantes
+
 #define tamanho 5
 
 //Estrutura da Pilha
+
 struct tpilha{
+
 int dados[tamanho];
+    
 int ini;
+    
 int fim;
+    
 };
 
 // Variaveis globais
+
 struct tpilha pilha;
+
 int op;
 
 //Prototipação
+
 void pilha_entrar();
+
 void pilha_sair();
+
 void pilha_mostrar();
+
 void menu_mostrar();
 
 //Função principal
+
 int main(){
+
     setlocale(LC_ALL, "Portuguese");
     op = 1;
     pilha.ini = 0;
@@ -38,13 +55,16 @@ int main(){
     case 1:
         pilha_entrar();
         break;
-
+        
     case 2:
         pilha_sair();
         break;
     }
+    
 }
+
 return(0);
+
 }
 
 //Função para adicionar um elemento no final da pilha
@@ -77,6 +97,7 @@ void pilha_sair(){
 //Função para mostrar o conteúdo da pilha
 
 void pilha_mostrar(){
+
     int i;
     printf("[  ");
     for (i = 0; i < tamanho; i++){
@@ -87,6 +108,7 @@ void pilha_mostrar(){
 
 //Mostrar o menu de opções
 void menu_mostrar(){
+
     printf("\nEscolha uma opção:\n");
     printf("1 - Empilhar\n");
     printf("2 - Desempilhar\n");
